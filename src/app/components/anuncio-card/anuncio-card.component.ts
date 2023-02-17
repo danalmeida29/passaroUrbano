@@ -22,6 +22,9 @@ export class AnuncioCardComponent implements OnInit {
   @Input()
   ofertaCover: string = "";
 
+  @Input()
+  Id: string = ""
+
   constructor() { }
 
   ngOnInit(): void {

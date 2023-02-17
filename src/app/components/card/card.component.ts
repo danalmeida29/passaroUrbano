@@ -18,6 +18,8 @@ export class CardComponent implements OnInit {
   @Input()
   ofertaPrice: string = "";
   
+  @Input()
+  Id: string = ""
   constructor() { }
 
   ngOnInit(): void {

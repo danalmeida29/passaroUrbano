@@ -4,6 +4,6 @@
       <h4 class="card-title">{{ofertaTitle}}</h4>
       <p class="card-text">{{ofertaDescription}}</p>
       <p class="preco">{{ofertaPrice}}</p>
-      <a href="#" class="btn btn-outline-primary">Ver oferta</a>
+      <button [routerLink]="['/Detalhes', Id]" class="btn btn-outline-primary">Ver oferta</button>
     </div>
 </div>

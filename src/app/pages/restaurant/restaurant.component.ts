@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OfertasService } from 'src/app/service/ofertas.service';
 
 @Component({
   selector: 'app-restaurant',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantComponent implements OnInit {
 
-  constructor() { }
+  public ofertasCategoria: any
+  public error!: Error
+  constructor( private ofertasService: OfertasService ) { }
 
   ngOnInit(): void {
+    this.getOfertas();
+  }
+
+  getOfertas(){
+    this.ofertasService.getOffersCategory('restaurante')
+    .subscribe(
+      (res: string) => {
+        this.ofertasCategoria = res;
+      },
+      (error: Error) => {
+        this.error = error;
+      }
+    );
   }
 
 }

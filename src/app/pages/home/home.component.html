@@ -10,12 +10,14 @@
   <div class="row">
     <div class="col-sm-4" *ngFor="let oferta of ofertas">
       <app-card 
-      ofertaCover="oferta.imagens[0]" 
+      ofertaCover="{{oferta.imagens[0]}}" 
       ofertaTitle="{{oferta.titulo}}" 
       ofertaDescription="{{oferta.descricao_oferta}}"
       ofertaPrice="{{oferta.valor}}"
+      Id="{{oferta.id}}"
       >
       </app-card>
     </div>
   </div> 
+  <br/>
 </div>

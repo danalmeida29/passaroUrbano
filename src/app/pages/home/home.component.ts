@@ -11,23 +11,23 @@ import { OfertasService } from '../../service/ofertas.service';
 export class HomeComponent implements OnInit {
 
   public ofertas!: Oferta[]
-
+  public error!: Error
   constructor(
     private ofertasService: OfertasService
-
     ) { }
 
   ngOnInit(): void {
-    // this.ofertas = this.ofertasService.getOfertas()
-    // console.log(this.ofertas)
+    this.getOfertas();
+  }
 
+  getOfertas(){
     this.ofertasService.getOfertas()
     .subscribe(
       (ofertas: Oferta[]) => {
         this.ofertas = ofertas;
       },
-      (error: any) => {
-        console.log(error);
+      (error: Error) => {
+        this.error = error;
       }
     );
   }
