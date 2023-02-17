@@ -14,7 +14,9 @@ import { DiversionComponent } from './pages/diversion/diversion.component';
 import { AnuncioCardComponent } from './components/anuncio-card/anuncio-card.component';
 
 import { DetailsOffersComponent } from './components/details-offers/details-offers.component';
-import { DescriptionComponent } from './components/details-offers/description/description.component';
+import { ComoUsarComponent } from './components/details-offers/como-usar/como-usar.component';
+import { OndeFicaComponent } from './components/details-offers/onde-fica/onde-fica.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { DescriptionComponent } from './components/details-offers/description/de
     DiversionComponent,
     AnuncioCardComponent,
     DetailsOffersComponent,
-    DescriptionComponent
+    ComoUsarComponent,
+    OndeFicaComponent
   ],
   imports: [
     BrowserModule,
