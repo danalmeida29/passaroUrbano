@@ -54,4 +54,10 @@ export class OfertasService {
       })
     );
   }
+
+  public pesquisaOfertas(): Observable<Oferta[]> {
+    const url = `${BASE_URL}/ofertas`;
+    return this.http.get<Oferta[]>(url)
+    .pipe(map((resposta: any) => resposta));
+  }
 }
