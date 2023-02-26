@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Oferta } from '../shared/oferta/oferta.model'
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { catchError, delay, map, retryWhen, take } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
 
 const BASE_URL = environment.BASE_URL_API
 
@@ -55,9 +55,17 @@ export class OfertasService {
     );
   }
 
+
   public pesquisaOfertas(): Observable<Oferta[]> {
     const url = `${BASE_URL}/ofertas`;
     return this.http.get<Oferta[]>(url)
-    .pipe(map((resposta: any) => resposta));
+      .pipe(
+        retryWhen(errors => errors.pipe(delay(1000), take(10))),
+        catchError(error => {
+          console.error(error);
+          return throwError(error);
+        }),
+        map((resposta: any) => resposta)
+      );
   }
 }

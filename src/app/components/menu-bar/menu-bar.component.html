@@ -13,6 +13,9 @@
           (input)="pesquisar($event)"
           spellcheck
           />
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let ofertas of filteredList">{{ofertas.titulo}}</li>
+          </ul>
         </div>
         <div class="col-md-2">
           <a a href="#"><img src="/assets/carrinho.png" /></a>

@@ -25,3 +25,12 @@
 .fixed-top{
     background: white;
 }
+.list-group{
+    position: absolute;
+    .list-group-item:hover{
+        cursor: pointer;
+        background-color: #006ACB;
+        color:#FFF;
+        border: 1px solid #006ACB;
+    }
+}

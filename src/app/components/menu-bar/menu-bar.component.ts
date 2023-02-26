@@ -32,10 +32,10 @@ export class MenuBarComponent implements OnInit, OnDestroy {
     this.ofertasSub = this.ofertasService.pesquisaOfertas().subscribe(
       (res: Oferta[]) => {
         this.ofertasList = res;
-        this.filteredList = this.ofertasList;
       },
-      (error: Error) => {
-        this.error = error;
+      (erro: any) => {
+        this.error = erro;
+        console.log('erro status', erro.status)
       }
     );
   }
@@ -46,7 +46,6 @@ export class MenuBarComponent implements OnInit, OnDestroy {
       oferta.titulo.trim().toLowerCase().includes(pesquisaValue) ||
       (oferta.descricao_oferta + oferta.categoria + oferta.anunciante).trim().toLowerCase().includes(pesquisaValue)
     );
-
     console.log('pesquisa feita foi: ', this.filteredList);
   }
 
