@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,8 @@ import { AnuncioCardComponent } from './components/anuncio-card/anuncio-card.com
 import { DetailsOffersComponent } from './components/details-offers/details-offers.component';
 import { ComoUsarComponent } from './components/details-offers/como-usar/como-usar.component';
 import { OndeFicaComponent } from './components/details-offers/onde-fica/onde-fica.component';
+import { FormatCurrencyPipe } from './shared/oferta/pipes/formatCurrency.pipe';
+import { DescricaoReduzida } from './shared/oferta/pipes/descricao-reduzida.pipe';
 
 
 @NgModule({
@@ -30,14 +32,19 @@ import { OndeFicaComponent } from './components/details-offers/onde-fica/onde-fi
     AnuncioCardComponent,
     DetailsOffersComponent,
     ComoUsarComponent,
-    OndeFicaComponent
+    OndeFicaComponent,
+    FormatCurrencyPipe,
+    DescricaoReduzida
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+    provide: LOCALE_ID, useValue: 'en-US'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

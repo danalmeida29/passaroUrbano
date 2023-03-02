@@ -3,7 +3,7 @@
     <div class="card-block">
       <h4 class="card-title">{{ofertaTitle}}</h4>
       <p class="card-text">{{ofertaDescription}}</p>
-      <p class="preco">{{ofertaPrice}}</p>
+      <p class="preco">{{ofertaPrice | formatCurrency}}</p>
       <button [routerLink]="['/Detalhes', Id]" class="btn btn-outline-primary">Ver oferta</button>
     </div>
 </div>

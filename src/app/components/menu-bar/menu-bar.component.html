@@ -13,8 +13,12 @@
           (input)="pesquisar($event)"
           spellcheck
           />
-          <ul class="list-group">
-            <li class="list-group-item" *ngFor="let ofertas of filteredList">{{ofertas.titulo}}</li>
+          <ul class="list-group" *ngIf="pesquisaValue">
+            <li class="list-group-item" *ngFor="let ofertas of filteredList">
+              <a routerLink="/Detalhes/{{ofertas.id}}" (click)="limpaPesquisa()">
+                {{ofertas.titulo | descricaoReduzida:15}}
+              </a>
+            </li>
           </ul>
         </div>
         <div class="col-md-2">
