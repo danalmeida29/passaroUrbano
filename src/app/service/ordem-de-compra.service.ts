@@ -17,6 +17,6 @@ export class OrdemDeCompraService {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
     return this.http.post(`${BASE_URL}/pedidos`, JSON.stringify(pedido), { headers })
-      .pipe(map((resposta: any) => resposta.json().id));
+      .pipe(map((resposta: any) => resposta.id));
   }
 }

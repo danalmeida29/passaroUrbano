@@ -2,3 +2,25 @@
     margin-top: 10px;   
     margin-bottom: 10px; 
 }
+
+input.ng-invalid.ng-touched{
+    border: solid 1px rgb(204, 0, 0);
+    color:rgb(204, 0, 0);
+}
+input.ng-valid.ng-touched{
+    border: solid 1px rgb(29, 126, 34);
+}
+input{
+    border: solid 1px #0d6efd;
+}
+
+select{
+    border: solid 1px #0d6efd;
+}
+select.ng-invalid.ng-touched{
+    border: solid 1px rgb(204, 0, 0);
+    color:rgb(204, 0, 0);
+}
+select.ng-valid.ng-touched{
+    border: solid 1px rgb(29, 126, 34);
+}

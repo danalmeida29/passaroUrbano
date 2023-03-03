@@ -3,6 +3,7 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 /** Pipes */
 import { FormatCurrencyPipe } from './shared/pipes/formatCurrency.pipe';
@@ -28,6 +29,7 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +52,8 @@ import { FormularioComponent } from './components/formulario/formulario.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     {

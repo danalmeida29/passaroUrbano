@@ -187,32 +187,18 @@
   ],
   "pedidos": [
     {
-      "endereco": "Rua.Francisco de Oliveira Braga",
+      "endereco": "Rua: Francisco de Oliveira Braga",
       "numero": "35",
-      "complemento": "casa B",
-      "formaDePagamento": "debito",
+      "complemento": "casa 3",
+      "formaDePagamento": "dinheiro",
       "id": 1
     },
     {
-      "endereco": "",
-      "numero": "",
-      "complemento": "",
-      "formaDePagamento": "",
-      "id": 2
-    },
-    {
-      "endereco": "Rua.Francisco de Oliveira Braga",
-      "numero": "35",
-      "complemento": "casa x",
-      "formaDePagamento": "dinheiro",
-      "id": 3
-    },
-    {
-      "endereco": "rua beraldo martineles de bragança",
-      "numero": "158",
-      "complemento": "apartamento 35 A",
+      "endereco": "Rua Mirandinha - penha",
+      "numero": "55",
+      "complemento": "Apartamento 12A",
       "formaDePagamento": "debito",
-      "id": 4
+      "id": 2
     }
   ]
 }
