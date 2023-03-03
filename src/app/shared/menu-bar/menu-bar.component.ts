@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { OfertasService } from 'src/app/service/ofertas.service';
-import { Oferta } from 'src/app/shared/oferta/oferta.model';
+import { Oferta } from 'src/app/shared/model/oferta.model';
 import * as unorm from 'unorm';
 
 @Component({

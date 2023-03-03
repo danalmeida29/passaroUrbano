@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Oferta } from '../shared/oferta/oferta.model'
+import { Oferta } from '../shared/model/oferta.model'
 import { HttpClient } from '@angular/common/http';
 import { catchError, delay, map, retryWhen, take } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';

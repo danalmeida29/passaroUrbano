@@ -7,6 +7,7 @@ import { OndeFicaComponent } from './components/details-offers/onde-fica/onde-fi
 
 import { DiversionComponent } from './pages/diversion/diversion.component';
 import { HomeComponent } from './pages/home/home.component';
+import { OrdemDeCompraComponent } from './pages/ordem-de-compra/ordem-de-compra.component';
 import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
       {path: "Onde-fica", component: OndeFicaComponent}
     ]
   },
+  {path: "ordem-compra", component: OrdemDeCompraComponent},
 ];
 
 @NgModule({
