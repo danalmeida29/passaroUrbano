@@ -199,6 +199,27 @@
       "complemento": "Apartamento 12A",
       "formaDePagamento": "debito",
       "id": 2
+    },
+    {
+      "endereco": "Rua.Francisco de Oliveira Braga",
+      "numero": "35",
+      "complemento": "35",
+      "formaDePagamento": "dinheiro",
+      "id": 3
+    },
+    {
+      "endereco": "Rua Domingo de Carlos",
+      "numero": "135",
+      "complemento": "casa F",
+      "formaDePagamento": "debito",
+      "id": 4
+    },
+    {
+      "endereco": "Rua Genoefa Paganine",
+      "numero": "158",
+      "complemento": null,
+      "formaDePagamento": "dinheiro",
+      "id": 5
     }
   ]
 }
