@@ -7,7 +7,7 @@
 
   <hr />
 
-  <div class="row" *ngFor="let  oferta of ofertasCategoria ">
+  <div class="row" id="card" *ngFor="let  oferta of ofertasCategoria ">
     <app-anuncio-card
     ofertaTitle = "{{oferta.titulo}}"
     ofertaDescription = "{{oferta.descricao_oferta}}"

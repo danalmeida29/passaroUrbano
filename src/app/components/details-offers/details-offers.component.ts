@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { CarrinhoService } from 'src/app/service/carrinho.service';
 import { OfertasService } from 'src/app/service/ofertas.service';
 import { Oferta } from 'src/app/shared/model/oferta.model';
 
@@ -15,7 +16,8 @@ export class DetailsOffersComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private ofertasService: OfertasService
+    private ofertasService: OfertasService,
+    private carrinhoService: CarrinhoService
     ) { }
 
   ngOnInit(): void {
@@ -28,7 +30,6 @@ export class DetailsOffersComponent implements OnInit {
       .subscribe(
         (oferta: Oferta) => {
           this.oferta = oferta;
-          console.log(this.oferta);
         },
         (error: Error) => {
           this.error = error;
@@ -36,6 +37,10 @@ export class DetailsOffersComponent implements OnInit {
       );
     })
    
+  }
+
+  addItemCarrinho(){
+    this.carrinhoService.putItem(this.oferta)
   }
 
 }

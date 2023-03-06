@@ -187,39 +187,64 @@
   ],
   "pedidos": [
     {
-      "endereco": "Rua: Francisco de Oliveira Braga",
-      "numero": "35",
-      "complemento": "casa 3",
-      "formaDePagamento": "dinheiro",
-      "id": 1
-    },
-    {
-      "endereco": "Rua Mirandinha - penha",
-      "numero": "55",
-      "complemento": "Apartamento 12A",
-      "formaDePagamento": "debito",
-      "id": 2
-    },
-    {
+      "primeiroNome": "stefany",
+      "sobrenome": "almeida",
+      "email": "stefany_mendes.a@hotmail.com",
       "endereco": "Rua.Francisco de Oliveira Braga",
       "numero": "35",
       "complemento": "35",
       "formaDePagamento": "dinheiro",
-      "id": 3
-    },
-    {
-      "endereco": "Rua Domingo de Carlos",
-      "numero": "135",
-      "complemento": "casa F",
-      "formaDePagamento": "debito",
-      "id": 4
-    },
-    {
-      "endereco": "Rua Genoefa Paganine",
-      "numero": "158",
-      "complemento": null,
-      "formaDePagamento": "dinheiro",
-      "id": 5
+      "itens": [
+        {
+          "id": 4,
+          "img": [
+            {
+              "url": "/src/assets/ofertas/4/img1.jpg"
+            },
+            {
+              "url": "/src/assets/ofertas/4/img2.jpg"
+            },
+            {
+              "url": "/src/assets/ofertas/4/img3.jpg"
+            },
+            {
+              "url": "/src/assets/ofertas/4/img4.jpg"
+            },
+            {
+              "url": "/src/assets/ofertas/4/img5.jpg"
+            },
+            {
+              "url": "/src/assets/ofertas/4/img6.jpg"
+            }
+          ],
+          "titulo": "Estância das águas",
+          "descricao_oferta": "Diversão garantida com piscinas, trilhas e muito mais.",
+          "valor": 31.9,
+          "quantidade": 1
+        },
+        {
+          "id": 2,
+          "img": [
+            {
+              "url": "/src/assets/ofertas/2/img1.jpg"
+            },
+            {
+              "url": "/src/assets/ofertas/2/img2.jpg"
+            },
+            {
+              "url": "/src/assets/ofertas/2/img3.jpg"
+            },
+            {
+              "url": "/src/assets/ofertas/2/img4.jpg"
+            }
+          ],
+          "titulo": "Cozinha Mexicana",
+          "descricao_oferta": "Almoço ou Jantar com Rodízio Mexicano delicioso.",
+          "valor": 32.9,
+          "quantidade": 1
+        }
+      ],
+      "id": 1
     }
   ]
 }

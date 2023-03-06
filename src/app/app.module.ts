@@ -5,9 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
-/** Pipes */
+/** Pipes & services */
 import { FormatCurrencyPipe } from './shared/pipes/formatCurrency.pipe';
 import { DescricaoReduzida } from './shared/pipes/descricao-reduzida.pipe';
+import { CarrinhoService } from './service/carrinho.service';
 
 /** Components */
 import { AppComponent } from './app.component';
@@ -30,6 +31,7 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,7 @@ import { FormularioComponent } from './components/formulario/formulario.componen
     FormatCurrencyPipe,
     DescricaoReduzida,
     OrdemCompraSucessoComponent,
-    FormularioComponent
+    FormularioComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +58,7 @@ import { FormularioComponent } from './components/formulario/formulario.componen
     ReactiveFormsModule
   ],
   providers: [
+    CarrinhoService,
     {
     provide: LOCALE_ID, useValue: 'en-US'
   }],

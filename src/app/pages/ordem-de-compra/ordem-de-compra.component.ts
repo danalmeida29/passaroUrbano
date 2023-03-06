@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { CarrinhoService } from 'src/app/service/carrinho.service';
 import { OrdemDeCompraService } from 'src/app/service/ordem-de-compra.service';
+import { ItemCarrinho } from 'src/app/shared/model/carrinho.model';
 import { Pedido } from '../../shared/model/pedido.model'
 
 @Component({
@@ -9,11 +11,33 @@ import { Pedido } from '../../shared/model/pedido.model'
 })
 export class OrdemDeCompraComponent implements OnInit {
 
-  constructor(private ordemDeCompraService: OrdemDeCompraService ) { }
+  public itensCarrinho: ItemCarrinho[] = []
+  carrinhoVazio!: TemplateRef<any>;
+  constructor( private carrinhoService: CarrinhoService ) { }
 
   ngOnInit(): void {
+    this.itemCarrinho()
+  
   }
 
  
+  itemCarrinho(){
+    this.itensCarrinho = this.carrinhoService.exibirItens()
+    return this.itensCarrinho
+  }
 
+  totalCompras(): number{
+    let total: number = 0
+    this.carrinhoService.itens
+    .map((item: ItemCarrinho)=>{
+      total = total + (item.valor * item.quantidade)
+    })
+
+    return total
+  }
+
+
+  alterarQuantidade(item:ItemCarrinho, quantidade:number){
+    this.carrinhoService.alterarQuantidade(item, quantidade)
+  }
 }
